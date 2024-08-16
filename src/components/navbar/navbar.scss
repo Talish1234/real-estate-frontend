@@ -1,0 +1,161 @@
+@import "../../responsive.scss";
+nav{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+        transition: all 0.4s ease;
+        @include sm{
+          display: none;
+        }
+        &:hover{
+            scale:1.05;
+        }
+    }
+    .left{
+     flex:3;
+     display: flex;
+     gap: 50px;
+     justify-content: center;
+     .logo{
+        font-weight: bold;
+        font-size: 20px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+     span{
+        @include md{
+            display: none;  
+          }
+        @include sm{
+            display: initial;
+        }
+     }
+     img{
+       width: 32px;
+      }
+     }
+    }
+    .right{
+     flex:2;
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     background-color: #fcf5f3;
+     height: 100%;
+     @include md{
+        background-color: transparent;
+     }
+     @include sm{
+        background-color: transparent;
+     }
+     .sign{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-right: 24px;
+     span{
+        margin: 12px 24px;
+     }
+     .register{
+      background-color: #fece51;
+   }
+   @include sm{
+    display: none;
+  }
+     }
+    
+    .user{
+       display: flex;
+       align-items: center;
+       font-weight: bold;
+       justify-content: center;
+       gap: 1.5rem;
+       padding-right: 24px;
+       img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-right: 0.5;
+       }
+       span{
+        @include sm{
+            display: none;
+        }
+       }
+       .profile{
+        position: relative;
+        padding: 12px 24px;
+        background-color: #fece51;
+        cursor: pointer;
+        border: none;
+        .notification{
+            position: absolute;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top:-8px;
+            right: -8px;
+        }
+       }
+    }
+
+    .menuIcon{
+        display: none;
+        z-index: 950;
+        img{
+            width:36px;
+            height: 36px;
+            cursor: pointer;
+        }
+        @include sm{
+        display: inline;
+        }
+     }
+     @keyframes slider {
+        0%{
+            position: absolute;
+            top: 0;
+            right: -50%;
+        }
+        100%{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        
+     }
+    .menu{
+        display: none;
+        &.active{
+        animation: slider 0.5s;
+        z-index: 900;
+        position:absolute;
+        top:0;
+        right: 0;
+        background-color: rgb(0, 0, 0);
+        color:white;
+        height:100vh;
+        width:50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        font-size: 24px;
+        }
+        @include sm{
+            .links{
+                display: initial;
+            }
+        }
+    }
+    }
+}
