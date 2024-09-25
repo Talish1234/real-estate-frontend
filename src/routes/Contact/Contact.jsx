@@ -13,21 +13,21 @@ function ContactPage() {
           <h2> Get in Touch</h2>
           <h3>Customer Support</h3>
           <ul>
-            <li>Email: support@talish.com</li>
+            <li>Email: support@noname.com</li>
             <li>Phone: +9898981010</li>
             <li>Hours: Monday - Friday, 9 AM - 6 PM</li>
           </ul>
 
           <h3>Sales Inquiries</h3>
           <ul>
-            <li>Email: sales@talish.com</li>
+            <li>Email: sales@noname.com</li>
             <li>Phone: +9898981010</li>
             <li>Hours: Monday - Friday, 9 AM - 6 PM</li>
           </ul>
 
           <h3>Technical Support</h3>
           <ul>
-            <li>Email:  techsupport@talish.com</li>
+            <li>Email:  techsupport@noname.com</li>
             <li>Phone: +9898981010</li>
             <li>Hours: Monday - Friday, 9 AM - 6 PM</li>
           </ul>
