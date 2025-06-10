@@ -12,7 +12,7 @@ function ListPage() {
     <div className="listContainer">
       <div className="wrapper">
         <Filter/>
-        {posts.map(item=>(
+        {(posts.length === 0)?<></>:posts.map(item=>(
           <Card key={item.id} item={item}/>
         ))}
       </div>

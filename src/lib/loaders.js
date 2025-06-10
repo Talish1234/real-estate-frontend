@@ -9,7 +9,10 @@ export const singlePageLoader = async ({request,params}) => {
 
 export const listPageLoader = async ({request,params}) => {
     const query = request.url.split("?")[1];
-    const res = await apiRequest("/posts?"+query);
+    const url = "/posts"+((query)?'?'+query:'');
+    console.log(url)
+    const res = await apiRequest(url);
+    console.log(res.data.posts)
     return res.data.posts;
 }
 
